@@ -19,7 +19,7 @@ to `main`, and let the github action create the branch for you.
 4. Edit the `.github/workflows/publish.yml` file to set the
   correct docpath to your site. This is generally `/[repo name]` so if your
 repository is `ministryofjustice/awesome-docs`, you need to set the
-`ROOT_DOCPATH` in those files to `/awesome-docs`.
+`ROOT_DOCPATH` in that file to `/awesome-docs`.
 5. Edit `config/tech-docs.yml` to set appropriate values for your site
 
 You can now manage your content by editing `*.html.md.erb` files below
