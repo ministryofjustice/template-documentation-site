@@ -49,10 +49,4 @@ automatically.
 You can ignore any messages like this that you see. It's a deprecation warning
 because a gem has not been updated wrt. the (currently) latest version of ruby.
 
-## Gemfile & Gemfile.lock
-
-Do not edit these files. If they don't match the contents of the
-`ministryofjustice/cloud-platform-tech-docs-publisher:1.1` docker image, you
-will get unexpected results/errors.
-
 [gov.uk tech-docs-template]: https://tdt-documentation.london.cloudapps.digital/
