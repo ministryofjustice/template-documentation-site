@@ -16,11 +16,20 @@ Use this template to create a documentation website using the [gov.uk tech-docs-
    `gh-pages` branch via github pages. You'll have to create the `gh-pages`
 branch first, or you can just defer this step until after your first push/merge
 to `main`, and let the github action create the branch for you.
-4. Edit the `.github/workflows/publish.yml` file to set the
-  correct docpath to your site. This is generally `/[repo name]` so if your
-repository is `ministryofjustice/awesome-docs`, you need to set the
-`ROOT_DOCPATH` in that file to `/awesome-docs`.
-5. Edit `config/tech-docs.yml` to set appropriate values for your site
+
+4. Edit `config/tech-docs.yml` to set appropriate values for:
+
+* `host:` - this should be the URL of your published GitHub Pages site, e.g:
+
+```
+https://ministryofjustice.github.io/modernisation-platform
+```
+
+> Do not include a `/` at the end of this URL
+
+* `service_link:` - This should be the docpath to your site. This is usually
+  `/[repo name]`, so if your repository is `ministryofjustice/awesome-docs`
+  `service_link` will be `/awesome-docs`
 
 You can now manage your content by editing `*.html.md.erb` files below
 `source/documentation`
