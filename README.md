@@ -52,3 +52,5 @@ automatically.
 > `gh-pages` branch to publish them. You should not edit any files in that
 > folder, because your changes will be lost the next time the site is
 > published.
+
+[gov.uk tech-docs-template]: https://github.com/alphagov/tech-docs-template#tech-docs-template
