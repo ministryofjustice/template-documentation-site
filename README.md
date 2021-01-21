@@ -52,10 +52,3 @@ automatically.
 > `gh-pages` branch to publish them. You should not edit any files in that
 > folder, because your changes will be lost the next time the site is
 > published.
-
-### warning: URI.unescape is obsolete
-
-You can ignore any messages like this that you see. It's a deprecation warning
-because a gem has not been updated wrt. the (currently) latest version of ruby.
-
-[gov.uk tech-docs-template]: https://tdt-documentation.london.cloudapps.digital/
