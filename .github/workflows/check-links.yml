@@ -3,9 +3,11 @@ name: Check for broken links
 on:
   workflow_dispatch:
   pull_request:
+    paths: 
+      - "source/**"
 
 jobs:
-  run:
+  check_links:
     runs-on: ubuntu-latest
     container:
       image: ministryofjustice/tech-docs-github-pages-publisher:1.1
