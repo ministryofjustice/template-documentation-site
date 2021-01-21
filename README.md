@@ -2,6 +2,8 @@
 
 Use this template to create a documentation website using the [gov.uk tech-docs-template].
 
+Documentation is published by github actions, using this [docker image].
+
 ## To create a site
 
 1. Create a repository from this template
@@ -54,3 +56,4 @@ automatically.
 > published.
 
 [gov.uk tech-docs-template]: https://github.com/alphagov/tech-docs-template#tech-docs-template
+[docker image]: https://github.com/ministryofjustice/tech-docs-github-pages-publisher
