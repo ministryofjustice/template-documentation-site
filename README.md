@@ -2,6 +2,8 @@
 
 Use this template to create a documentation website using the [gov.uk tech-docs-template].
 
+Documentation is published by github actions, using this [docker image].
+
 ## To create a site
 
 1. Create a repository from this template
@@ -53,9 +55,5 @@ automatically.
 > folder, because your changes will be lost the next time the site is
 > published.
 
-### warning: URI.unescape is obsolete
-
-You can ignore any messages like this that you see. It's a deprecation warning
-because a gem has not been updated wrt. the (currently) latest version of ruby.
-
-[gov.uk tech-docs-template]: https://tdt-documentation.london.cloudapps.digital/
+[gov.uk tech-docs-template]: https://github.com/alphagov/tech-docs-template#tech-docs-template
+[docker image]: https://github.com/ministryofjustice/tech-docs-github-pages-publisher
