@@ -17,7 +17,7 @@ Publishing is done by a Github Action [publish.yml](.github/workflows/publish.ym
 
     * Edit the copy of this README.md file, deleting everything up to the `---`
     * Grant permissions to the appropriate MoJ teams
-    * Setup branch protection
+    * Setup [branch protection](https://help.github.com/articles/about-protected-branches/)
 
 3. In your repository settings, in the Pages section configure it to publish the `/docs` folder in the
    `gh-pages` branch. You'll have to create the `gh-pages`
@@ -34,21 +34,29 @@ Publishing is done by a Github Action [publish.yml](.github/workflows/publish.ym
 
 ## Editing
 
-The documentation is changed by editing `*.html.md.erb` files, found in the folder tree: [source/documentation](source/documentation)
+The documentation is changed by editing `*.html.md.erb` files, found under the [source](source) folder.
 
-The format is Markdown and HTML - see [Tech Docs Template - Write your content](https://tdt-documentation.london.cloudapps.digital/write_docs/content/)
+The syntax is Markdown. For guidance see: [Tech Docs Template - Write your content](https://tdt-documentation.london.cloudapps.digital/write_docs/content/). [kramdown](https://kramdown.gettalong.org/syntax.html) is what compiles the Markdown. 
 
-While editing the files locally, you can [preview the site](#preview-docs). For more details, see the [gov.uk tech-docs-template] documentation.
+While editing the files locally, you can [preview the site](#preview-docs).
 
-Changes that are merged to the `main` branch are automatically [published](#publishing)
+Every change should be reviewed in a pull request, no matter how
+minor. [branch protection](https://help.github.com/articles/about-protected-branches/) is enabled to enforce this.
 
-This repo is a MOJ documentation site based on [template-documentation-site](https://github.com/ministryofjustice/template-documentation-site)
+Merging the changes to the `main` branch are automatically [published](#publishing)
 
 ## Preview docs
 
-You can run `make preview` to start a local instance of your site at
-`http://localhost:4567`, so that you can view changes while editing your
-content files.
+You can preview how your changes will look, if you've cloned this repo to your local machine, and run this command:
+
+```bash
+make preview
+```
+
+This will run a preview web server on http://localhost:4567 which you can open in your browser.
+
+This is only accessible on your computer, and won't be accessible
+to anyone else.
 
 ## Publishing
 
