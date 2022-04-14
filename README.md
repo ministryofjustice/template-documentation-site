@@ -37,6 +37,8 @@ Publishing is done by the Github Action [publish.yml](.github/workflows/publish.
 
 5. [Edit your content](#editing).
 
+**The docs folder is used by the gh-pages branch to host the website. Do not delete.**
+
 ---
 
 # Example XYZ Documentation
