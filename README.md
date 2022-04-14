@@ -45,11 +45,11 @@ Publishing is done by the Github Action [publish.yml](.github/workflows/publish.
 
 The documentation is created by editing `*.html.md.erb` files, found in the [source](source) folder.
 
-The syntax is Markdown. 
+The syntax is Markdown, more details can be found [here](https://daringfireball.net/projects/markdown/). 
 
 For guidance see the Tech Docs Template [Write your content](https://tdt-documentation.london.cloudapps.digital/write_docs/content/). 
 
-The Markdown syntax may use [kramdown](https://kramdown.gettalong.org/syntax.html). 
+The Markdown syntax may use [kramdown](https://kramdown.gettalong.org/syntax.html) TBC. 
 
 While editing the files locally, you can start a Docker container that will use Middleman to act as a server hosting the webpages. See [preview docs](#preview-docs).
 
