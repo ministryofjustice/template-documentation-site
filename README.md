@@ -2,21 +2,21 @@
 
 [![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&logo=github&label=MoJ%20Compliant&query=%24.data%5B%3F%28%40.name%20%3D%3D%20%22template-documentation-site%22%29%5D.status&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fgithub_repositories)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/github_repositories#template-documentation-site "Link to report")
 
-Use this repo template to create a documentation website using the GOV.UK [Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/) / [source code](https://github.com/alphagov/tech-docs-template).
+Use this repository template to create a documentation website using the GOV.UK [Technical Documentation Template](https://tdt-documentation.london.cloudapps.digital/) and its [source code](https://github.com/alphagov/tech-docs-template).
 
 This is recommended for MOJ's technical documentation because:
 
-* The template uses [GOV.UK Design System](https://design-system.service.gov.uk/) and makes it also consistent with many tech docs sites in MOJ [MOJ Technical Guidance](https://technical-guidance.service.justice.gov.uk/#moj-technical-guidance), [MOJ Security Guidance](https://security-guidance.service.justice.gov.uk/), [Cloud Platform User Guide](https://user-guide.cloud-platform.service.justice.gov.uk/).
+* The template uses the [GOV.UK Design System](https://design-system.service.gov.uk/) and makes it also consistent with many tech docs sites such as MOJ [MOJ Technical Guidance](https://technical-guidance.service.justice.gov.uk/#moj-technical-guidance), [MOJ Security Guidance](https://security-guidance.service.justice.gov.uk/), and [Cloud Platform User Guide](https://user-guide.cloud-platform.service.justice.gov.uk/).
 
-This is a [list](https://github.com/alphagov/tech-docs-gem/network/dependents) of other sites that use the govuk_tech_docs gem.
+* This is a [list](https://github.com/alphagov/tech-docs-gem/network/dependents) of other sites that use the govuk_tech_docs gem.
 
 * Both engineers and non-technical people can write your documentation using the [‘docs as code’](https://technology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/) approach.
 
-Publishing is done by a Github Action [publish.yml](.github/workflows/publish.yml) that makes use of [tech-docs-github-pages-publisher docker image](https://github.com/ministryofjustice/tech-docs-github-pages-publisher).
+Publishing is done by the Github Action [publish.yml](.github/workflows/publish.yml) that makes use of [tech-docs-github-pages-publisher](https://github.com/ministryofjustice/tech-docs-github-pages-publisher) docker container.
 
 ## To create a site
 
-1. Create a repository from this template
+1. Create a repository from this template.
 
 2. Make the "normal" changes:
 
@@ -43,15 +43,17 @@ Publishing is done by a Github Action [publish.yml](.github/workflows/publish.ym
 
 ## Editing
 
-The documentation is changed by editing `*.html.md.erb` files, found in the [source](source) folder.
+The documentation is created by editing `*.html.md.erb` files, found in the [source](source) folder.
 
-The syntax is Markdown. For guidance see the Tech Docs Template [Write your content](https://tdt-documentation.london.cloudapps.digital/write_docs/content/). 
+The syntax is Markdown. 
+
+For guidance see the Tech Docs Template [Write your content](https://tdt-documentation.london.cloudapps.digital/write_docs/content/). 
 
 The Markdown syntax may use [kramdown](https://kramdown.gettalong.org/syntax.html). 
 
-While editing the files locally, you can start a Docker image that will use Middleman to act as a server hosting the webpages. See [preview docs](#preview-docs).
+While editing the files locally, you can start a Docker container that will use Middleman to act as a server hosting the webpages. See [preview docs](#preview-docs).
 
-Every change should be reviewed in a pull request, no matter how minor. PR review should be enabled within the main branch protection settings.
+Every change should be reviewed in a pull request, no matter how minor. PR request reviewer/s should be enabled within the main branch protection settings.
 
 Merging the changes to the `main` branch automatically publishes the changes via GH Action. See [publishing](#publishing).
 
