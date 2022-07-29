@@ -25,19 +25,19 @@ Publishing is done by the Github Action [publish.yml](.github/workflows/publish.
     * Try not to add individual users to the repository, instead use a team.
     * To add an Outside Collaborator to the repository follow the guidelines on the [GitHub-collaborator repository](https://github.com/ministryofjustice/github-collaborators).
     * Ensure branch protection is set up on the main branch.
-    * Modify the CODEOWNERS file and state the team or users that can authorise PR's. 
+    * [Optional] Modify the CODEOWNERS file and state the team or users that can authorise PR's. 
     * Modify the Dependabot file to suit the [dependency manager](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem) you plan to use and for [automated pull requests for package updates](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/enabling-and-disabling-dependabot-version-updates#enabling-dependabot-version-updates). Dependabot is enabled in the settings by default.
     * Modify the short description found on the right side of the README.md file.
     * Ensure as many of the [GitHub Standards](https://github.com/ministryofjustice/github-repository-standards) rules are maintained as possibly can.
     * Modify the MoJ Compliant Badge url using these [instructions](https://github.com/orgs/ministryofjustice/teams/operations-engineering/discussions).
 
-3. In your repository settings, in the Pages section configure it to publish the `/docs` folder in the `gh-pages` branch. You'll have to create the `gh-pages` branch first, or you can just defer this step until after your first push/merge to `main`, and let the Github Action create the branch for you.
+3. In your repository settings, in the Pages section for 'Build and deployment' 'Source' change to the option 'GitHubs Actions' after your first push/merge to `main`, the Github Action will create the the gh-pages. The link will be in repository settings Pages section.
 
 4. Edit [config/tech-docs.yml](config/tech-docs.yml) to set appropriate values for the [template configuration](#template-configuration).
 
 5. [Edit your content](#editing).
 
-**The docs folder is used by the gh-pages branch to host the website. Do not delete.**
+**The docs folder is used by gh-pages to host the website. Do not delete.**
 
 ---
 
@@ -75,14 +75,7 @@ For more details see the [tech-docs-github-pages-publisher](https://github.com/m
 
 ## Publishing
 
-Provided you have updated the `.github/workflows/publish.yml` file as directed, any changes you push/merge into the `main` branch should be published to GitHub Pages site automatically.
-
-The URL for the published site is: (TODO)
-
-> The publishing process creates files in `/docs` and pushes them to the
-> `gh-pages` branch to publish them. You should not edit any files in that
-> folder, because your changes will be lost the next time the site is
-> published.
+Any changes you push/merge into the `main` branch should be published to GitHub Pages site automatically.
 
 ## Template configuration
 
