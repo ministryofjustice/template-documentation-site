@@ -63,11 +63,13 @@ Merging the changes to the `main` branch automatically publishes the changes via
 
 You can preview how your changes will look, if you've cloned this repo to your local machine, and run this command:
 
-```bash
+```
 make preview
 ```
 
 This will run a preview web server on http://localhost:4567 which you can open in your browser.
+
+Use `make check` to compile the site to html and check the URLs are valid.
 
 This is only accessible on your computer, and won't be accessible to anyone else.
 
