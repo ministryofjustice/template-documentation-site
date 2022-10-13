@@ -6,7 +6,7 @@ host: https://ministryofjustice.github.io/template-documentation-site
 # Header-related options
 show_govuk_logo: true
 service_name: Template Documentation Site
-service_link: /template-documentation-site
+service_link: /
 
 # Links to show on right-hand-side of header
 header_links:
