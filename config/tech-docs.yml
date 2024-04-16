@@ -1,10 +1,8 @@
-# See the available options: https://tdt-documentation.london.cloudapps.digital/configure_project/global_configuration/#configure-your-documentation-site
-
 # Host to use for canonical URL generation (without trailing slash)
 host: https://ministryofjustice.github.io/template-documentation-site
 
 # Header-related options
-show_govuk_logo: true
+show_govuk_logo: false
 service_name: Template Documentation Site
 service_link: /
 
