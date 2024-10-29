@@ -24,6 +24,8 @@ This is recommended for MoJ's technical documentation because:
 
 1. Create a repository using this template ([shortcut](https://github.com/new?template_name=template-documentation-site&template_owner=ministryofjustice))
 
+1. Follow the setup instructions from [ministryofjustice/template-repository](https://github.com/ministryofjustice/template-repository?tab=readme-ov-file#setup-instructions)
+
 1. Remove the legacy technical documentation site
 
     - `source/legacy-tdt-documentation`
@@ -54,3 +56,7 @@ To perform this locally, you will either need to use the dev container or instal
 ```bash
 make link-check
 ```
+
+# Publishing
+
+This template includes a GitHub Actions workflow ([`.github/workflows/publish.yml`](.github/workflows/publish.yml)) for publishing to GitHub Pages when merging to `main`.
