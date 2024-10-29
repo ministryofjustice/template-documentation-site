@@ -30,6 +30,8 @@ This is recommended for MoJ's technical documentation because:
 
     - `source/legacy-tdt-documentation`
 
+For guidance on using the tech-docs-gem, please refer to the [legacy documentation](https://ministryofjustice.github.io/template-documentation-site/legacy-tdt-documentation).
+
 # Developing
 
 > [!TIP]
@@ -44,7 +46,7 @@ This is recommended for MoJ's technical documentation because:
 Running the following command will run your technical documentation site locally using [ministryofjustice/tech-docs-github-pages-publisher](https://github.com/ministryofjustice/tech-docs-github-pages-publisher), allowing you to access it by visiting <http://127.0.0.1:4567> in your browser
 
 ```bash
-nake preview
+make preview
 ```
 
 ## Checking links locally
