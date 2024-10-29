@@ -1,0 +1,16 @@
+{
+  "name": "template-documentation-site",
+  "image": "ghcr.io/ministryofjustice/devcontainer-base:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.associations": {
+          "*.html.md.erb": "markdown"
+        }
+      }
+    }
+  }
+}
