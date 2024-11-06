@@ -1,0 +1,11 @@
+# References to previewing locally
+http://127.0.0.1:4567
+http://localhost:4567
+
+# Links from README
+https://ministryofjustice.github.io/template-documentation-site/legacy-tdt-documentation
+
+# Links from source/legacy-tdt-documentation
+https://www.larry-the-cat.service.gov.uk
+http://www.htaccesstools.com/htpasswd-generator
+https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.yaml
