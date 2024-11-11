@@ -1,6 +1,25 @@
 ---
-title: GOV.UK Documentation Example
+title: Template Documentation Site
 ---
 
-<!-- This means open the file documentation/index.html as the entry point -->
-<%= partial 'documentation/index' %>
+# <%= current_page.data.title %>
+
+## Legacy Tech Docs Template Documentation
+
+The Government Digital Service previously published documentation for [`alphagov/tdt-documentation`](https://github.com/alphagov/tdt-documentation), but closed down the site when [GOV.UK PaaS](https://www.cloud.service.gov.uk/) was decommissioned.
+
+This documentation has been preserved under [`legacy-tdt-documentation`](legacy-tdt-documentation) from the [commit](https://github.com/alphagov/tdt-documentation/commit/53c1d22110ebe6c5123d45c4fd68b833db6cae8c) when it was decommissioned. Changes have been made to fix links specifically in `partials/_links.erb` and any pages that use images.
+
+- [Accessibility](legacy-tdt-documentation/accessibility)
+
+- [Configure your documentation project](legacy-tdt-documentation/configure_project)
+
+- [Create a documentation project](legacy-tdt-documentation/create_project)
+
+- [Maintain your documentation project](legacy-tdt-documentation/maintain_project)
+
+- [Publish your documentation project](legacy-tdt-documentation/publish_project)
+
+- [Support](legacy-tdt-documentation/support)
+
+- [Write your documentation](legacy-tdt-documentation/write_docs)

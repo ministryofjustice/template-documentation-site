@@ -1,69 +1,60 @@
-name: Publish gh-pages
+---
+name: Publish
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - "main"
-    paths-ignore:
-      - "docs/**"
+      - main
 
-# GITHUB_TOKEN permissions to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
-# Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: github-pages
   cancel-in-progress: true
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     container:
-      image: ministryofjustice/tech-docs-github-pages-publisher:v3
+      image: ghcr.io/ministryofjustice/tech-docs-github-pages-publisher@sha256:35699473dbeefeeb8b597de024125a241277ee03587d5fe8e72545e4b27b33f8 # v5.0.0
+    permissions:
+      contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Compile Markdown to HTML and create artifact
+        id: checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Build
+        id: build
         run: |
-          /scripts/deploy.sh
-      - name: Upload artifact to be published
-        uses: actions/upload-artifact@v4
+          /usr/local/bin/package
+
+      - name: Upload Artifact
+        id: upload_artifact
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
           name: github-pages
           path: artifact.tar
           retention-days: 1
+          overwrite: true
 
-  deploy:
+  publish:
     needs: build
+    name: Publish
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.configure_pages.outputs.base_url }}
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
     steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@f33f41b675f0ab2dc5a6863c9a170fe83af3571e # v4.0.0
+      - name: Configure Pages
+        id: configure_pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
-  url-check:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download a Build Artifact from build
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: github-pages
-      - name: Unpack files and check URL links
-        run: |
-          cd github-pages
-          tar -xvf artifact.tar
-          npm install linkinator
-          npx linkinator . --recurse --markdown \
-            --skip https://ministryofjustice.github.io/template-documentation-site/images/govuk-large.png \
-          # "URL Check will fail on private and internal GitHub repositories"
+      - name: Deploy to GitHub Pages
+        id: deploy_pages
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
