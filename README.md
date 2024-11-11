@@ -34,9 +34,6 @@ For guidance on using the tech-docs-gem, please refer to the [legacy documentati
 
 # Developing
 
-> [!TIP]
-> This repository includes an **optional** [Dev Container](https://containers.dev/) with the required tools. You will need Docker, Visual Studio Code and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), or access to GitHub Codespaces.
-
 ## Requirements
 
 - Docker
