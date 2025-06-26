@@ -14,7 +14,7 @@ This is recommended for MoJ's technical documentation because:
 
   - [MoJ's technical guidance](https://technical-guidance.service.justice.gov.uk/)
 
-  - [Operations Engineering's user guide](https://user-guide.operations-engineering.service.justice.gov.uk/)
+  - [Cloud Optimisation & Accountability](https://cloud-optimisation-and-accountability.justice.gov.uk/)
 
 - Technical and non-technical team members can write your documentation using the [‘docs as code’](https://technology.blog.gov.uk/2017/08/25/why-we-use-a-docs-as-code-approach-for-technical-documentation/) approach
 
