@@ -13,7 +13,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ministryofjustice/tech-docs-github-pages-publisher@sha256:0b9c705b053850f47908e9691f3b77212c5f85bee7db5f0938feb634485ef05b # v6.0.0
+      image: ghcr.io/ministryofjustice/tech-docs-github-pages-publisher@sha256:c55eb7a18eb667a2e616e16cf0918b26c1932fc03e6ad8e9bfe6961fd746692e # v6.0.1
     permissions:
       contents: read
     steps:
