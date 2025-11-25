@@ -3,7 +3,7 @@
 .DEFAULT_GOAL := preview
 
 TECH_DOCS_GITHUB_PAGES_PUBLISHER_IMAGE     ?= ghcr.io/ministryofjustice/tech-docs-github-pages-publisher
-TECH_DOCS_GITHUB_PAGES_PUBLISHER_IMAGE_SHA ?= sha256:d8af6ed8a86c63f7ded2276f2d1a8473d255c5a44d261ef8c17163c295916f95 # v6.1.0
+TECH_DOCS_GITHUB_PAGES_PUBLISHER_IMAGE_SHA ?= sha256:8b00235edfa4d1248e3cdd08c022d5f398c7f4abb3315b6078f1e876214a171e # v6.2.0
 
 package:
 	docker run --rm \
